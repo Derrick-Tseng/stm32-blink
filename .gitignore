@@ -1,2 +1,5 @@
 /build
+/docs
+*.map
 *.elf
+*.bin
