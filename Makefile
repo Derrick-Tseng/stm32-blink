@@ -8,7 +8,7 @@ CFLAGS  = $(CPU) -DSTM32F411xE -Iinc -Wall -Wextra -O0 -g3 -ffunction-sections -
 ASFLAGS = $(CPU) -g3
 LDFLAGS = $(CPU) -TSTM32F411RE.ld --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections -Wl,-Map=$(TARGET).map
 
-OBJS = build/main.o build/system_stm32f4xx.o build/startup_stm32f411xe.o
+OBJS = build/main.o build/ring.o build/system_stm32f4xx.o build/startup_stm32f411xe.o
 
 all: $(TARGET).elf $(TARGET).bin
 	$(SIZE) $(TARGET).elf
